@@ -10,26 +10,27 @@ export default function PrimaryButton({title, action, bgColor}) {
 }
 
 const styles = StyleSheet.create({
-    button: {
-        width: '100%',
-        color: 'white',
-        paddingBlock: 10,
-        paddingHorizontal: 30,
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 10,
+  button: {
+    width: '100%',
+    color: 'white',
+    paddingBlock: 10,
+    paddingHorizontal: 30,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
 
-        elevation: 3,
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25
-    },
-    buttonText: {
-        fontSize: 20,
-        color: 'white',
-    },
-    isPressed: {
-        opacity: 0.8
-    }
+    // Apply shadow
+    elevation: 3,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25
+  },
+  buttonText: {
+    fontSize: 20,
+    color: 'white',
+  },
+  isPressed: {
+    opacity: 0.8
+  }
 })
