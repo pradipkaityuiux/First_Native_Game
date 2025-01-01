@@ -1,6 +1,7 @@
 import { View, TextInput, StyleSheet, Alert } from 'react-native'
 import React, { useState } from 'react'
-import PrimaryButton from '../Components/PrimaryButton'
+import PrimaryButton from '../Components/ui/PrimaryButton'
+import Colors from '../Constants/colors'
 
 export default function StartGameScreen({onValidNumber}) {
   const [enteredNumber, setEnteredNumber] = useState('')
@@ -24,9 +25,9 @@ export default function StartGameScreen({onValidNumber}) {
 
   return (
     <View style={{marginTop: 50, width: '80%', alignItems: 'center'}}>
-        <TextInput keyboardType='number-pad' placeholder='Enter a Number' placeholderTextColor={'#C4DAD2'} style={styles.numberInput} maxLength={2} value={enteredNumber} onChangeText={numberInputHandler}/>
-        <PrimaryButton title='Confirm' action={confirmInputHandler} bgColor='#365486'/>
-        <PrimaryButton title='Reset' action={resetInputHandler}  bgColor='#ECB159'/>
+        <TextInput keyboardType='number-pad' placeholder='Enter a Number' placeholderTextColor={Colors.placeholder} style={styles.numberInput} maxLength={2} value={enteredNumber} onChangeText={numberInputHandler}/>
+        <PrimaryButton title='Confirm' action={confirmInputHandler} bgColor={Colors.btnPrimary}/>
+        <PrimaryButton title='Reset' action={resetInputHandler}  bgColor={Colors.btnSecondary}/>
     </View>
   )
 }
@@ -34,12 +35,12 @@ export default function StartGameScreen({onValidNumber}) {
 const styles = StyleSheet.create({
   numberInput: {
     width: '100%',
-    borderBottomColor: '#003C43',
+    borderBottomColor: Colors.inputColor,
     borderBottomWidth: 2,
     marginBottom: 20,
     fontSize: 40,
     padding: 5,
     textAlign: 'center',
-    color: '#003C43'
+    color: Colors.inputColor,
   }
 })
