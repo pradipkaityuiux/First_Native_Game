@@ -11,17 +11,17 @@ export default function GuessNumber({children}) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor: Colors.btnSecondary,
-        borderWidth: 2,
-        padding: 10,
-        borderRadius: 10,
-    },
-    title: {
-        fontSize: 36,
-        fontWeight: 'bold',
-        color: Colors.btnSecondary
-    }
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: Colors.btnSecondary,
+    borderWidth: 2,
+    padding: 10,
+    borderRadius: 10,
+  },
+  title: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    color: Colors.btnSecondary
+  }
 })

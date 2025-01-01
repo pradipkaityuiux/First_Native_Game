@@ -26,8 +26,8 @@ export default function StartGameScreen({onValidNumber}) {
   return (
     <View style={{marginTop: 50, width: '80%', alignItems: 'center'}}>
         <TextInput keyboardType='number-pad' placeholder='Enter a Number' placeholderTextColor={Colors.placeholder} style={styles.numberInput} maxLength={2} value={enteredNumber} onChangeText={numberInputHandler}/>
-        <PrimaryButton title='Confirm' action={confirmInputHandler} bgColor={Colors.btnPrimary}/>
-        <PrimaryButton title='Reset' action={resetInputHandler}  bgColor={Colors.btnSecondary}/>
+        <PrimaryButton action={confirmInputHandler} bgColor={Colors.btnPrimary} setStyle={{ width: '100%' }}>Confirm</PrimaryButton>
+        <PrimaryButton action={resetInputHandler}  bgColor={Colors.btnSecondary} setStyle={{ width: '100%' }}>Reset</PrimaryButton>
     </View>
   )
 }

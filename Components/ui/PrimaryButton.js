@@ -2,17 +2,16 @@ import { View, Text, Pressable, StyleSheet } from 'react-native'
 import React from 'react'
 import Colors from '../../Constants/colors'
 
-export default function PrimaryButton({title, action, bgColor}) {
+export default function PrimaryButton({children, action, bgColor, setStyle}) {
   return (
-    <Pressable onPress={action} style={({pressed})=> pressed ? [styles.button, { backgroundColor: bgColor }, styles.isPressed] : [styles.button, { backgroundColor: bgColor }]} android_ripple={{color: Colors.ripple}}>
-      <Text style={styles.buttonText}>{title}</Text>
+    <Pressable onPress={action} style={({pressed})=> pressed ? [styles.button, { backgroundColor: bgColor }, styles.isPressed, setStyle] : [styles.button, { backgroundColor: bgColor }, setStyle]} android_ripple={{color: Colors.ripple}}>
+      <Text style={styles.buttonText}>{children}</Text>
     </Pressable>
   )
 }
 
 const styles = StyleSheet.create({
   button: {
-    width: '100%',
     color: 'white',
     paddingBlock: 10,
     paddingHorizontal: 30,
