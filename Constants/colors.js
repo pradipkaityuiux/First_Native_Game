@@ -1,4 +1,5 @@
 const colors = {
+    textColor: '#FFF',
     placeholder: '#C4DAD2',
     btnPrimary: '#365486',
     btnSecondary: '#ECB159',
